@@ -26,9 +26,14 @@ public class RunGrid {
         new generic.genericGrid().leventarNodosGrid();
         Config.setProperty("Navegador","chrome");
         Config.store(new FileWriter("configuracion\\configuracion.properties"),"Cambio de Navegador a Chrome");
-        //core.run (TestCases.Test_Boletos_Reservar.class);
+        core.run (TestCases.Test_Boletos_Reservar.class);
         core.run (TestCases.Test_Facturas_Facturacion.class);
         core.run (TestCases.Test_Paqueteria_Buscar_Guia.class);
-        new generic.genericGrid().cierraNodosGrid();
+        Config.setProperty("Navegador","chrome");
+        Config.store(new FileWriter("configuracion\\configuracion.properties"),"Cambio de Navegador a firefox");
+        core.run (TestCases.Test_Boletos_Reservar.class);
+        core.run (TestCases.Test_Facturas_Facturacion.class);
+        core.run (TestCases.Test_Paqueteria_Buscar_Guia.class);
+        //new generic.genericGrid().cierraNodosGrid();
     }
 }
