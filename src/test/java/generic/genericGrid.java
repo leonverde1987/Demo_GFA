@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
@@ -145,6 +146,28 @@ public class genericGrid extends evidenceGrid {
         
     }
     
+    public void GenerarEvidencias(RemoteWebDriver driver, String Escenario, String Resultado, int contador, List<String> Pasos, String RutaEvidencia, String Modulo, String Version, String navegador){
+        try{
+            System.out.println("Lista: "+Pasos);
+            if(Resultado.length()>10){
+                if("Ejecución Fallida".equals(Resultado.substring(0, 17))){
+                    this.capturaDriver(driver, RutaEvidencia, contador, Escenario, navegador);
+                }
+            }
+            //Generamos PDF
+            this.crearPDF(Escenario, Resultado, contador, Pasos, RutaEvidencia, Modulo, Version, navegador);
+            //Generamos PDF
+            this.crearXML(Escenario, Resultado, contador, Pasos, RutaEvidencia, navegador);
+            //Generamos HTML
+            this.crearHTML(Escenario, Resultado, contador, Pasos, RutaEvidencia, Modulo, Version, navegador);
+
+            if("Fallido".equals(Resultado.substring(0, 7))){
+                throw new Exception(Resultado);
+            }
+        }catch(Exception e){
+            System.out.println("MEnsaje Evidencia: "+e);
+        }
+    }
     /*
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ASSERTS

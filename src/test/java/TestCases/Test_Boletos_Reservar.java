@@ -82,7 +82,7 @@ public class Test_Boletos_Reservar extends steps_Boletos_Reservar{
             this.capturarEvidencia(driver, Config, contador, Escenario, Navegador);
             System.out.println(Resultado);
         }finally{
-            this.finalizarTestCase(Escenario, Resultado, contador, Pasos, RutaEvidencia, Config.getProperty("Modulo"), Config.getProperty("Version"), Navegador);
+            this.finalizarTestCase(driver, Escenario, Resultado, contador, Pasos, RutaEvidencia, Config.getProperty("Modulo"), Config.getProperty("Version"), Navegador);
         }
     }
     

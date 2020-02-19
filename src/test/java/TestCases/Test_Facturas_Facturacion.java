@@ -96,7 +96,7 @@ public class Test_Facturas_Facturacion extends steps_Facturas_Facturacion{
             this.capturarEvidencia(driver, Config, contador, Escenario, Navegador);
             System.out.println(Resultado);
         }finally{
-            this.finalizarTestCase(Escenario, Resultado, contador, Pasos, RutaEvidencia, Config.getProperty("Modulo"), Config.getProperty("Version"), Navegador);
+            this.finalizarTestCase(driver, Escenario, Resultado, contador, Pasos, RutaEvidencia, Config.getProperty("Modulo"), Config.getProperty("Version"), Navegador);
         }
     }
     

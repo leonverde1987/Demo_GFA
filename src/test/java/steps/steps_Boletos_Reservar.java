@@ -169,22 +169,8 @@ public class steps_Boletos_Reservar extends genericGrid{
      * @param Version Es la versión del aplicativo.
      * @throws Exception Cacha cualquier excepción en la ejecución.
      */
-    public void finalizarTestCase(String Escenario, String Resultado, int contador, List<String> Pasos, String RutaEvidencia, String Modulo, String Version, String navegador) throws Exception{
-        try{
-            System.out.println("Lista: "+Pasos);
-            //Generamos PDF
-            this.crearPDF(Escenario, Resultado, contador, Pasos, RutaEvidencia, Modulo, Version, navegador);
-            //Generamos PDF
-            this.crearXML(Escenario, Resultado, contador, Pasos, RutaEvidencia, navegador);
-            //Generamos HTML
-            this.crearHTML(Escenario, Resultado, contador, Pasos, RutaEvidencia, Modulo, Version, navegador);
-
-            if("Fallido".equals(Resultado.substring(0, 7))){
-                throw new Exception(Resultado);
-            }
-        }catch(Exception e){
-            System.out.println("MEnsaje Evidencia: "+e);
-        }
+    public void finalizarTestCase(RemoteWebDriver driver, String Escenario, String Resultado, int contador, List<String> Pasos, String RutaEvidencia, String Modulo, String Version, String navegador) throws Exception{
+        this.GenerarEvidencias(driver, Escenario, Resultado, contador, Pasos, RutaEvidencia, Modulo, Version, navegador);
     }
     
     /**
