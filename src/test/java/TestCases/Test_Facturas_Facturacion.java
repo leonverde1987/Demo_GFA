@@ -52,7 +52,7 @@ public class Test_Facturas_Facturacion extends steps_Facturas_Facturacion{
     }
     
     @Test
-    @SpiraTestCase(testCaseId=6900)
+    @SpiraTestCase(testCaseId=9163)
     public void Test_Facturar_Token_No_Valido() throws InterruptedException, DocumentException, BadElementException, IOException, Exception {
         try{
             Escenario = "FAC_Factuarar_Facturar_Boletos.";

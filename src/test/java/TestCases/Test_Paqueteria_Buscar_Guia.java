@@ -52,7 +52,7 @@ public class Test_Paqueteria_Buscar_Guia extends steps_Paqueteria_Buscar_Guia{
     }
     
     @Test
-    @SpiraTestCase(testCaseId=6900)
+    @SpiraTestCase(testCaseId=7683)
     public void Test_Buscar_Guia() throws InterruptedException, DocumentException, BadElementException, IOException, Exception {
         try{
             Escenario = "PAQ_Home_Buscar_Guia_que_no_Existe.";

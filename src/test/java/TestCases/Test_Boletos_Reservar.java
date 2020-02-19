@@ -52,7 +52,7 @@ public class Test_Boletos_Reservar extends steps_Boletos_Reservar{
     }
     
     @Test
-    @SpiraTestCase(testCaseId=6900)
+    @SpiraTestCase(testCaseId=7681)
     public void Test_Ver_Horarios_Boletos() throws InterruptedException, DocumentException, BadElementException, IOException, Exception {
         try{
             Escenario = "BTO_Reservar_Buscar sin Origen y Destino.";

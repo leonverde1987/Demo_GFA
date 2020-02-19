@@ -23,13 +23,13 @@ public class RunGrid {
         Properties Config = new generic.genericGrid().getPropetiesFile("configuracion\\configuracion.properties");
         JUnitCore core = new JUnitCore();
         core.addListener(new SpiraTestListener());
-        new generic.genericGrid().leventarNodosGrid();
+        //new generic.genericGrid().leventarNodosGrid();
         Config.setProperty("Navegador","chrome");
         Config.store(new FileWriter("configuracion\\configuracion.properties"),"Cambio de Navegador a Chrome");
         core.run (TestCases.Test_Boletos_Reservar.class);
         core.run (TestCases.Test_Facturas_Facturacion.class);
         core.run (TestCases.Test_Paqueteria_Buscar_Guia.class);
-        Config.setProperty("Navegador","chrome");
+        Config.setProperty("Navegador","firefox");
         Config.store(new FileWriter("configuracion\\configuracion.properties"),"Cambio de Navegador a firefox");
         core.run (TestCases.Test_Boletos_Reservar.class);
         core.run (TestCases.Test_Facturas_Facturacion.class);
