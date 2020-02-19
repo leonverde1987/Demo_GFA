@@ -46,7 +46,7 @@ public class Test_Boletos_Reservar extends steps_Boletos_Reservar{
         contador = 1;
         RutaEvidencia = Config.getProperty("rutaEvidencia");
         Resultado = "Fallido";
-        Navegador = Config.getProperty("Navegador");
+        Navegador = Config.getProperty("NavegadorBol");
         driver = this.openGridBrowser(Navegador, Config);
         
     }
