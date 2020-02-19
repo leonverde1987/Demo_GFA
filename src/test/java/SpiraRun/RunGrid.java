@@ -18,8 +18,6 @@ import org.junit.runner.JUnitCore;
  * @author TestingIT
  */
 public class RunGrid {
-    FireFoxThread firefox = new FireFoxThread();
-    ChromeThread chrome = new ChromeThread();
     
     @Test
     public void TestBuscarGoogleGrid() throws InterruptedException, FileNotFoundException, IOException {
@@ -39,8 +37,5 @@ public class RunGrid {
         core.run (TestCases.Test_Paqueteria_Buscar_Guia.class);
         //new generic.genericGrid().cierraNodosGrid();
 
-        
-//        chrome.start();
-//        firefox.start();
     }
 }
