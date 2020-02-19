@@ -63,7 +63,7 @@ public class genericGrid extends evidenceGrid {
             if("chrome".equals(navegador)){
                 capabilities.setBrowserName(navegador);
                 capabilities = DesiredCapabilities.chrome();
-                url = new URL("http://localhost:5556/wd/hub");
+                url = new URL("http://localhost:5557/wd/hub");
                 driver = new RemoteWebDriver(url, capabilities);
             }
             if("ie".equals(navegador)){
@@ -86,7 +86,7 @@ public class genericGrid extends evidenceGrid {
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 //capabilities.setBrowserName(navegador);
                 //capabilities = DesiredCapabilities.firefox();
-                url = new URL("http://localhost:5558/wd/hub");
+                url = new URL("http://localhost:5556/wd/hub");
                 driver = new RemoteWebDriver(url, firefoxOptions);
             }
             
